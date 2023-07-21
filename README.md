@@ -14,10 +14,36 @@ Philosophy : Whatever is needed, we use **opensource** and if it is not availabl
 **The application is being Developed**
 
 
+
+
 ## Install
 
 
 
+## Manual
+
+```
+python opendiag --paramaters
+```
+
+```
+python opendiag -PR
+```
+
+```
+python opendiag --dtc
+```
+
+```
+python opendiag -DT
+```
+```
+python opendiag --help
+```
+
+```
+python opendiag -H
+```
 
 
 ## Remove
