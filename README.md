@@ -2,8 +2,9 @@
 
 OpenSource and Free Automitive Diag For Geeks
 
-![tux](./static/kygnus+.png)
-![JYGnus](./static/tux_repair.jpg)
+## KYGNus (Koosha Yeganeh GnuLinux Softwares)
+
+![KYGnus](./static/tux_repair.jpg)
 
 ## INFO
 
