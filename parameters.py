@@ -1,7 +1,7 @@
 import obd
 import os
 import sys
-
+from colorama import Fore, Back, Style
 
 
 def para():
@@ -10,9 +10,9 @@ def para():
 
     # Check if the connection is established
     if connection.is_connected():
-        print("Connected to the OBD-II Module")
+        print(Fore.LIGHTGREEN_EX + "> Connected to the OBD-II Module")
     else:
-        print("Connection to the OBD-II Module failed.")
+        print(Fore.LIGHTRED_EX + "> Connection to the OBD-II Module failed. [ ERROR ]")
         exit()
 
     # Read specific OBD-II parameters
@@ -23,10 +23,10 @@ def para():
     coolant_temp_response = connection.query(obd.commands.COOLANT_TEMP)
 
     if not rpm_response.is_null():
-        print("RPM:", rpm_response.value)
+        print(Fore.LIGHTGREEN_EX + "> RPM:", rpm_response.value)
     if not speed_response.is_null():
-        print("Speed:", speed_response.value)
+        print(Fore.LIGHTGREEN_EX + "> Speed:", speed_response.value)
     if not coolant_temp_response.is_null():
-        print("Coolant Temperature:", coolant_temp_response.value)
+        print(Fore.LIGHTGREEN_EX + "> Coolant Temperature:", coolant_temp_response.value)
 
-    return "check Parameters Done"
+    return ( Fore.RESET + "Check Parameters Done")
