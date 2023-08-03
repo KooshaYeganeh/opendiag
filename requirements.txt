@@ -2,3 +2,6 @@ colorama==0.4.6
 obd==0.7.2
 Pint==0.20.1
 pyserial==3.5
+PyVISA==1.13.0
+PyVISA-py==0.7.0
+typing_extensions==4.7.1
