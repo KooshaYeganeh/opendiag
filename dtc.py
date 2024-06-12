@@ -2,6 +2,7 @@ import obd
 from colorama import Fore, Back, Style
 
 def check_dtc():
+    connection = obd.OBD()  # Initialize the OBD connection
     dtc_response = connection.query(obd.commands.GET_DTC)
     if not dtc_response.is_null():
         dtcs = dtc_response.value
