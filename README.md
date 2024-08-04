@@ -1,71 +1,99 @@
 # opendiag
 
-OpenSource and Free Automitive Diag For Geeks
+Open Source and Free Automotive Diagnostics for Geeks
 
 ## KYGNus (Koosha Yeganeh GnuLinux Softwares)
 
 ![KYGnus](./static/tux_repair.jpg)
 
-## INFO
+## 🚀 INFO
 
-Philosophy : Whatever is needed, we use **opensource** and if it is not available, we try to **Develop** it.
+**Philosophy**: Whatever is needed, we use **opensource**, and if it is not available, we try to **develop** it.
 
+**The application is currently under development.**
 
-**The application is being Developed**
+## 📦 Installation
 
+To install `opendiag`, follow these steps:
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/opendiag.git
+   ```
 
+2. Navigate to the project directory:
+   ```bash
+   cd opendiag
+   ```
 
-## Install
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+## 🛠️ Manual
 
+### Check Parameters
 
-## Manual
+To check the parameters available in `opendiag`, use:
 
-### check parameters
-
+```bash
+python opendiag --parameters
 ```
-python opendiag --paramaters
-```
+
 or
 
-```
+```bash
 python opendiag -PR
 ```
 
-## get Trouble codes
+### Get Trouble Codes
 
-```
+To retrieve trouble codes, use:
+
+```bash
 python opendiag --dtc
 ```
+
 or
-```
+
+```bash
 python opendiag -DT
 ```
 
 ### Help
-```
+
+For help and a list of commands, use:
+
+```bash
 python opendiag --help
 ```
+
 or
-```
+
+```bash
 python opendiag -H
 ```
 
+## 🗑️ Remove
 
-## Remove
+To uninstall or remove `opendiag`, follow these steps:
 
+1. Navigate to the project directory (if not already there):
+   ```bash
+   cd opendiag
+   ```
 
+2. Uninstall the package:
+   ```bash
+   pip uninstall opendiag
+   ```
 
+## 📧 Contact
 
+For any inquiries or support, please contact:
 
-## contact
-
-- Gmail : Kooshakooshadv@gmail.com
-
-
-
-
+- **Email**: [Kooshakooshadv@gmail.com](mailto:Kooshakooshadv@gmail.com)
 
 
 
