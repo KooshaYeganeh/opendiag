@@ -1,99 +1,86 @@
-# opendiag
+# OBD-II Diagnostic Tool 🚗🔧
 
-Open Source and Free Automotive Diagnostics for Geeks
+Welcome to the **OBD-II Diagnostic Tool**! This powerful Python-based tool allows you to interface with your vehicle's OBD-II system, perform diagnostics, and visualize data. It supports a variety of functionalities including CAN bus sniffing, WebSocket communication, and data plotting.
 
-## KYGNus (Koosha Yeganeh GnuLinux Softwares)
+![OBD-II Diagnostic Tool](https://img.shields.io/badge/OBD--II--Diagnostic--Tool-v1.0-blue)
 
-![KYGnus](./static/tux_repair.jpg)
+## Features 🌟
 
-## 🚀 INFO
+- **Diagnostic Trouble Codes (DTC)**: Retrieve and clear DTCs.
+- **OBD-II Parameters**: Display real-time vehicle parameters like RPM, speed, and coolant temperature.
+- **CAN Bus Sniffer**: Monitor CAN bus traffic.
+- **OBD Oscilloscope**: Plot real-time data for in-depth analysis.
+- **WebSocket Communication**: Connect and communicate with WebSocket servers.
 
-**Philosophy**: Whatever is needed, we use **opensource**, and if it is not available, we try to **develop** it.
+## Installation 🛠️
 
-**The application is currently under development.**
-
-## 📦 Installation
-
-To install `opendiag`, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/opendiag.git
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yourusername/obd2-diagnostic-tool.git
+   cd obd2-diagnostic-tool
    ```
 
-2. Navigate to the project directory:
-   ```bash
-   cd opendiag
-   ```
-
-3. Install the required dependencies:
-   ```bash
+2. **Install dependencies:**
+   ```sh
    pip install -r requirements.txt
    ```
 
-## 🛠️ Manual
+## Usage 📋
 
-### Check Parameters
+To use the tool, run the script with the appropriate command. Available commands include:
 
-To check the parameters available in `opendiag`, use:
-
-```bash
-python opendiag --parameters
+```sh
+python opendiag.py <command>
 ```
 
-or
+### Commands
 
-```bash
-python opendiag -PR
+- `--dtc` or `--D` 🎛️: Check Diagnostic Trouble Codes (DTCs)
+- `--parameters` or `-PR` 📊: Display OBD-II Parameters
+- `--can-sniffer` or `--CS` 🕵️: Start CAN Bus Sniffer
+- `--oscilloscope` or `--O` 📈: Start OBD-II Oscilloscope Plotting
+- `--websocket` or `--WS` 🌐: Start WebSocket Communication
+- `--help` or `H` ❓: Display help message
+
+### Example Usage
+
+Retrieve DTCs:
+```sh
+python opendiag.py --dtc
 ```
 
-### Get Trouble Codes
-
-To retrieve trouble codes, use:
-
-```bash
-python opendiag --dtc
+Start CAN bus sniffing:
+```sh
+python opendiag.py --can-sniffer
 ```
 
-or
+## Dependencies 📦
 
-```bash
-python opendiag -DT
-```
+- **numpy**: Numerical operations.
+- **pandas**: Data manipulation and analysis.
+- **matplotlib**: Plotting and visualization.
+- **seaborn**: Statistical data visualization.
+- **pydatalog**: Logical programming and queries.
+- **python-can**: CAN bus interface.
+- **canmatrix**: CAN matrix manipulation.
+- **websocket-client**: WebSocket communication.
+- **colorama**: Terminal color formatting.
+- **obd**: OBD-II interface.
 
-### Help
+## Configuration ⚙️
 
-For help and a list of commands, use:
+- **CAN Interface**: Ensure that your CAN interface is correctly configured and connected.
+- **WebSocket URL**: Update the WebSocket URL in the `websocket_communication` method.
 
-```bash
-python opendiag --help
-```
+## Contributing 🤝
 
-or
+We welcome contributions! If you have suggestions, bug fixes, or new features, please fork the repository and create a pull request.
 
-```bash
-python opendiag -H
-```
+## License 📜
 
-## 🗑️ Remove
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-To uninstall or remove `opendiag`, follow these steps:
+## Contact 📧
 
-1. Navigate to the project directory (if not already there):
-   ```bash
-   cd opendiag
-   ```
-
-2. Uninstall the package:
-   ```bash
-   pip uninstall opendiag
-   ```
-
-## 📧 Contact
-
-For any inquiries or support, please contact:
-
-- **Email**: [Kooshakooshadv@gmail.com](mailto:Kooshakooshadv@gmail.com)
-
-
-
+For any questions or support, please reach out to [kooshakooshadv@gmail.com](mailto:your.email@example.com).
+[http://kooshateganeh.github.io](website)
