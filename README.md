@@ -24,6 +24,11 @@ Welcome to the **OBD-II Diagnostic Tool**! This powerful Python-based tool allow
    ```sh
    pip install -r requirements.txt
    ```
+### Get Executable File in Linux
+
+```
+pyinstaller opendiag.py --onefile -n opendiag && rm opendiag.spec && rm -rvf build && cp dist/opendiag . && rm -rvf dist
+```
 
 ## Usage 📋
 
