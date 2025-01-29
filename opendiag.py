@@ -15,18 +15,18 @@ from websocket import create_connection
 
 
 print("""
-      
-      
-      
-      
+
+
+
+
  ▗▄▖ ▗▄▄▖ ▗▄▄▄▖▗▖  ▗▖▗▄▄▄ ▗▄▄▄▖ ▗▄▖  ▗▄▄▖
-▐▌ ▐▌▐▌ ▐▌▐▌   ▐▛▚▖▐▌▐▌  █  █  ▐▌ ▐▌▐▌   
+▐▌ ▐▌▐▌ ▐▌▐▌   ▐▛▚▖▐▌▐▌  █  █  ▐▌ ▐▌▐▌
 ▐▌ ▐▌▐▛▀▘ ▐▛▀▀▘▐▌ ▝▜▌▐▌  █  █  ▐▛▀▜▌▐▌▝▜▌
 ▝▚▄▞▘▐▌   ▐▙▄▄▖▐▌  ▐▌▐▙▄▄▀▗▄█▄▖▐▌ ▐▌▝▚▄▞▘
-                                         
-                                         
-      
-      
+
+
+
+
       """)
 
 
@@ -41,7 +41,7 @@ class OBD2Tool:
     def setup_connection(self):
         """Attempt to establish the OBD-II connection, with enhanced error handling."""
         try:
-            self.connection = obd.OBD()  # Initialize OBD connection
+            self.connection = obd.OBD("/dev/ttyACM0")  # Initialize OBD connection
             if not self.connection.is_connected():
                 raise ConnectionError("No OBD-II adapters found. Please check your connection.")
             print(Fore.LIGHTGREEN_EX + "OBD-II connection established successfully.")
@@ -123,7 +123,7 @@ class OBD2Tool:
             print(Fore.LIGHTRED_EX + f"OBD Command Error: {e}")
         except Exception as e:
             print(Fore.LIGHTRED_EX + f"Unexpected Error: {e}")
-        
+
     def clear_dtc(self):
         """Send the command to clear Diagnostic Trouble Codes (DTCs)."""
         if not self.connection or not self.connection.is_connected():
@@ -268,14 +268,14 @@ def main():
         print(Fore.CYAN + """
 Usage:
     --dtc or --D            Check Diagnostic Trouble Codes (DTCs)
-    --clear-dtc", --C       Remove Diagnostic Trouble Codes (DTCs) 
+    --clear-dtc", --C       Remove Diagnostic Trouble Codes (DTCs)
     --parameters or -PR     Display OBD-II Parameters
     --can-sniffer or --CS   Start CAN Bus Sniffer
     --oscilloscope or --O   Start OBD-II Oscilloscope Plotting
     --websocket or --WS     Start WebSocket Communication
     --help or H             Display this help message
 """)
-        
+
     elif command in ["--info", "I"]:
         print(Fore.CYAN + """
 INFO :
