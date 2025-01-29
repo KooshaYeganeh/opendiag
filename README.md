@@ -30,6 +30,34 @@ Welcome to the **OBD-II Diagnostic Tool**! This powerful Python-based tool allow
 pyinstaller opendiag.py --onefile -n opendiag && rm opendiag.spec && rm -rvf build && cp dist/opendiag . && rm -rvf dist
 ```
 
+In Linux Device Name is : /dev/ttyACM0
+
+```
+ls /dev/tty* | grep "ACM"
+```
+
+```
+ls -l /dev/ttyACM0
+```
+
+```
+sudo usermod -aG dialout $USER
+```
+
+```
+crw-rw---- 1 root dialout 166, 0 Jan 29 14:12 /dev/ttyACM0
+```
+
+**You can USE this Tools to Communicate with ELM327**
+
+obd-II library (Python): Great for programmatically interacting with the ECU.
+can-utils: Useful for low-level CAN bus communication and raw CAN frame handling.
+ELM327 command-line tool: Provides simple command-line interaction with the ELM327 adapter.
+PyOBD: Another Python library alternative.
+miniscan: A minimalistic tool for sending simple OBD-II commands.
+Termite: For manual interaction via a serial terminal.
+
+
 ## Usage 📋
 
 To use the tool, run the script with the appropriate command. Available commands include:
