@@ -50,12 +50,12 @@ crw-rw---- 1 root dialout 166, 0 Jan 29 14:12 /dev/ttyACM0
 
 **You can USE this Tools to Communicate with ELM327**
 
-obd-II library (Python): Great for programmatically interacting with the ECU.
-can-utils: Useful for low-level CAN bus communication and raw CAN frame handling.
-ELM327 command-line tool: Provides simple command-line interaction with the ELM327 adapter.
-PyOBD: Another Python library alternative.
-miniscan: A minimalistic tool for sending simple OBD-II commands.
-Termite: For manual interaction via a serial terminal.
+obd-II library (Python): Great for programmatically interacting with the ECU.<br/>
+can-utils: Useful for low-level CAN bus communication and raw CAN frame handling.<br/>
+ELM327 command-line tool: Provides simple command-line interaction with the ELM327 adapter.<br/>
+PyOBD: Another Python library alternative.<br/>
+miniscan: A minimalistic tool for sending simple OBD-II commands.<br/>
+Termite: For manual interaction via a serial terminal.<br/>
 
 
 ## Usage 📋
